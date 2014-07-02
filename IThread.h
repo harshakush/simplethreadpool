@@ -23,6 +23,7 @@ public: IThread() { }
 			//IWorkPtr workk_static = reinterpret_cast<IWorkPtr>(work);
 			IWorkPtr workk_static = *(reinterpret_cast<IWorkPtr*>(work));
 			workk_static->do_work();
+
 			Sleep(15000);
 			return 0;
 		}		

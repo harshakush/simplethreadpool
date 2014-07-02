@@ -35,9 +35,11 @@ void IPool::wait_all()
 {
 	HANDLE *array = new HANDLE[thrd_queue.size()];
 	int i = 0;
-	for each (IThreadPtr tr in thrd_queue)
-	{
+
+	for each (IThreadPtr tr in thrd_queue) {
 		array[i++] = tr->getHandle();
 	}
-	WaitForMultipleObjectsEx(thrd_queue.size(),array, true, INFINITE, true);
+
+	WaitForMultipleObjectsEx(thrd_queue.size(), array, true, INFINITE, true);
+	delete [] array;
 }
