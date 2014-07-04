@@ -1,34 +1,46 @@
+
 #ifndef IPOOL_HEADER
 #define IPOOL_HEADER
+
 #include<iostream>
 #include<list>
 #include<vector>
-#include "IWork.h"
-#include "IThread.h"
+#include <Windows.h>
+#include <memory>
+//#include "IQueue.h"
+
+//user defined
+#include "AThread.h"
+
 using namespace std;
+
+class IQueue;
 
 class IPool
 {
 public: IPool();
 		
-		~IPool()
-		{
-			cout << "Ipool destructor called";
-		}
-		virtual void init(const int limi);
+		~IPool();
+		
+		virtual void init();
 		
 
 		virtual void add_work(IWorkPtr item);
+		
+		//virtual IWorkPtr getNextWorkItem();
 		
 
 		virtual void run_all();
 
 		virtual void wait_all();
 
-		
+				
 private: int limit;
 		 std::vector<IWorkPtr> work_queue;
-		 std::vector<IThreadPtr> thrd_queue;
+		 std::vector<AThreadPtr> thrd_queue;
+		 CRITICAL_SECTION crt_sct_obj;
+		 shared_ptr<IQueue>  queue_pvt;
+		
 };
-typedef  SP<IPool> IPoolPtr;
+typedef  shared_ptr<IPool> IPoolPtr;
 #endif

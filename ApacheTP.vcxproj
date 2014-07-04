@@ -79,7 +79,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IThread.h" />
+    <ClInclude Include="IQueue.h" />
+    <ClInclude Include="AThread.h" />
     <ClInclude Include="IWork.h" />
     <ClInclude Include="Pool.h" />
     <ClInclude Include="PrintWork.h" />
@@ -87,10 +88,13 @@
     <ClInclude Include="SmartPointer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Type1Thread.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ApacheTP.cpp" />
-    <ClCompile Include="IThread.cpp" />
+    <ClCompile Include="AThread.cpp" />
+    <ClCompile Include="IQueueException.h" />
+    <ClCompile Include="Type1Thread.cpp" />
     <ClCompile Include="Pool.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>

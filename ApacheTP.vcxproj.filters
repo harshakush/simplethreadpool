@@ -24,9 +24,6 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IThread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="IWork.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -42,6 +39,15 @@
     <ClInclude Include="RefCnt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Type1Thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -50,11 +56,17 @@
     <ClCompile Include="ApacheTP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IThread.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Pool.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Type1Thread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IQueueException.h">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

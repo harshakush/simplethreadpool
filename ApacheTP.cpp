@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "IThread.h"
+#include "AThread.h"
 #include "Pool.h"
 #include "PrintWork.h"
 #include "SmartPointer.h"
@@ -21,9 +21,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			pool.add_work(p2);
 			pool.add_work(p3);
 			pool.add_work(p4);
-
-			pool.init(2);
-
+			
 			pool.run_all();
 			pool.wait_all();
 		}
